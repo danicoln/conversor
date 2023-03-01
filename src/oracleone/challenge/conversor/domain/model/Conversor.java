@@ -7,7 +7,6 @@ import java.util.Currency;
 import java.util.Locale;
 
 public class Conversor extends Component {
-
     private double moedaValor;
     private double moedaPar;
 
@@ -21,14 +20,11 @@ public class Conversor extends Component {
 
     public void calcularDeBrlParaMoedaEstrangeira() {
         double conversao = moedaValor / moedaPar;
-
         JOptionPane.showMessageDialog(null, " Valor convertido " + conversao);
-
     }
 
     public void calcularDeMoedaEstrangeiraParaBrl() {
         double conversao = moedaValor * moedaPar;
-
         JOptionPane.showMessageDialog(null, " Valor convertido " + formatar(conversao));
 
     }

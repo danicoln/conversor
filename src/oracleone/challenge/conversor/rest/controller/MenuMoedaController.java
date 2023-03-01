@@ -12,9 +12,7 @@ import javax.swing.*;
  */
 public class MenuMoedaController {
 
-
     private ConversorService conversorService = new ConversorService();
-
 
     /**
      * Método que faz a conversão de moeda de acordo com a opção escolhida

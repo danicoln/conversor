@@ -1,0 +1,4 @@
+oracleone.challenge.conversor
+oracleone.challenge.conversor.domain.model
+oracleone.challenge.conversor.domain.service
+oracleone.challenge.conversor.rest.controller

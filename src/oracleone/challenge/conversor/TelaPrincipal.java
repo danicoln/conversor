@@ -4,8 +4,15 @@ import oracleone.challenge.conversor.rest.controller.MenuMoedaController;
 
 import javax.swing.*;
 
+/**
+ * Tela principal do programa
+ */
+
 public class TelaPrincipal {
     public static void main(String[] args) throws Exception {
+
+        /**Caixa de diálogo que permite o usuário escolher entre as opções de conversão.
+         * */
 
         boolean continua = true;
         do {
@@ -26,7 +33,14 @@ public class TelaPrincipal {
                 MenuMoedaController menuMoeda = new MenuMoedaController();
                 menuMoeda.conversorDeMoeda();
 
-                //================verificar se o programa continua ou não ============
+                /**Tarefa: Nosso cliente quer que nosso usuário decida que ele quer fazer depois de executar a primeira conversão. Apresentamos as seguintes opções:
+
+                 Yes: deve trazer nosso usuário novamente para o menu principal.
+                 No: Você deve mostrar uma mensagem "Programa finalizado"
+                 Cancel: Você deve mostrar uma mensagem de "Programa concluído"
+
+                 Utilizar o método showConfirmDialog para o usuário que deseja seguir no programa. */
+
                 int continuar = JOptionPane.showConfirmDialog(
                         null,
                         "Deseja continuar?",
@@ -50,7 +64,6 @@ public class TelaPrincipal {
                             JOptionPane.INFORMATION_MESSAGE);
                     return;
                 }
-                //================verificar se o programa continua ou não ============
 
             } else if (entrada.equals("Conversor de Temperatura")) {
                 System.out.println("IMPLEMENTAR: Conversor de temperatura");

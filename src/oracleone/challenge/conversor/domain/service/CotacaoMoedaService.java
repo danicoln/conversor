@@ -13,6 +13,7 @@ import java.util.List;
 public class CotacaoMoedaService {
     static String webService = "https://economia.awesomeapi.com.br/json/";
     private static Moeda novaMoeda;
+
     public static Moeda buscaMoedaPeloCodigo(String codigo) throws Exception {
         String urlParaChamada = webService + codigo;
 
@@ -23,14 +24,14 @@ public class CotacaoMoedaService {
             String str = "";
             List<String> jsonMoedas = new ArrayList<>();
 
-            while((str = reader.readLine()) != null){
+            while ((str = reader.readLine()) != null) {
                 jsonMoedas.add(str);
             }
 
             //regex
-            String string = jsonMoedas.toString().replaceAll("[\\[\\]]","");
+            String string = jsonMoedas.toString().replaceAll("[\\[\\]]", "");
 
-            Moeda moedaJson = new Gson().fromJson(string,Moeda.class);
+            Moeda moedaJson = new Gson().fromJson(string, Moeda.class);
 
             novaMoeda = new Moeda(moedaJson.getCode(), moedaJson.getBid());
 
@@ -40,5 +41,4 @@ public class CotacaoMoedaService {
             throw new Exception("Erro: " + e);
         }
     }
-
 }
